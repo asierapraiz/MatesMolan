@@ -1,79 +1,83 @@
+//Math.floor((Math.random() * 4));
+//-----------------Audios---------------------
 var dingRojo = new Audio('audio/ding0.ogg');
 var dingAzul = new Audio('audio/ding1.ogg');
 var dingAmarillo = new Audio('audio/ding2.ogg');
 var dingVerde = new Audio('audio/ding3.ogg');
+
+//------------Distintas variables--------------
 var colores = ["rojo", "azul", "verde", "amarillo"];
 var jugada = [];
-var seleccion = [];
-var timbres = 1;
-var tiro = 1;
-var turno = 1;
-var tirada = 1;
+var original = [];
+//Variable que marca la velocidad inicial.
 var velocidad = 1200;
-/*console.log(colores[1]);*/
-$(".quesito").on("click", function () {
-    ilumina($(this));
-});
 
+//-----------Comienza el juego--------------
 $(document).ready(function () {
-    if (juega(timbres)) {
-        escucha(timbres);
-    }
-
-
+    añadeColor();
 });
-/*
-$("#" + colores[1]).click();
-console.log(colores[1]);*/
+//Selecciona un color al azar y lo incluye en el array original.
+function añadeColor() {
+    var color = colores[Math.floor((Math.random() * 4))];
+    //Guardo el color elegido por Simon
+    original.push(color);
+    //Copio el array original a jugada.
+    jugada = original.slice();
+    //Voy aumentando la velocidad.
+    velocidad = velocidad - (velocidad / 10);
+    juega();
+}
 
-Math.floor((Math.random() * 4));
-
-
-function juega(timbres) {
-    $("#quesito").off('click');
-    var cont = 1;
+//Muestra por pantalla
+function juega() {
+    $(".quesito").off('click');
     setTimeout(function () {
-        var color = colores[Math.floor((Math.random() * 4))];
-        jugada.push(color);
-        console.log(jugada[jugada.length - 1]);
-        ilumina($("#" + color));
-        if (cont < timbres - 1) {
-            juega(timbres - 1);
-            cont++;
+        //Ilumina quesito.
+        ilumina($("#" + jugada[0]));
+        jugada.shift();
+        if (jugada.length == 0) {
+            jugada = original.slice();
+            escucha();
         } else {
-            return true;
+            juega();
         }
     }, velocidad);
-
-
 }
 
-function escucha(timbres) {
-    console.log("Hola");
-    if (tiro <= timbres) {
-        $("#quesito").on("click", function () {
-            if (this.attr('id') == jugada[timbres]) {
-                ilumina($("#" + color));
-                tiro++;
-            } else {
-                audioError.play();
+//Turno del jugador.
+function escucha() {
+    $(".quesito").on("click", function () {
+        //Si acierta...
+        if ($(this).attr('id') == jugada[0]) {
+            ilumina($(this));
+            jugada.shift();
+            if (jugada.length == 0) {
+                setTimeout(function () {
+                    añadeColor();
+                }, velocidad);
             }
-        });
-        if (tiro == timbres) {
-            tiro = 1;
-            juega(2);
+            //Si falla...
+        } else {
+            audioError.play();
+            //Reseteo todo
+            jugada.length = 0;
+            original.length = 0;
+            velocidad = 1200;
+            //Vuelvo a empezar..
+            setTimeout(function () {
+                añadeColor();
+            }, 3000);
         }
-    }
-
+    });
 }
 
 
-
+//Ilumina el quesito correspondiente.
 function ilumina(elemento) {
     elemento.addClass('brilla');
     setTimeout(function () {
         elemento.removeClass('brilla');
-    }, 700);
+    }, velocidad - 200);
     var color = elemento.attr('id');
     switch (color) {
     case 'rojo':
@@ -87,21 +91,18 @@ function ilumina(elemento) {
             dingAmarillo.currentTime = 0;
         }
         dingAmarillo.play();
-
         break;
     case 'azul':
         if (dingAzul.currentTime > 0 || !dingAzul.paused) {
             dingAzul.currentTime = 0;
         }
         dingAzul.play();
-
         break;
     case 'verde':
         if (dingVerde.currentTime > 0 || !dingVerde.paused) {
             dingVerde.currentTime = 0;
         }
         dingVerde.play();
-
         break;
     }
 
