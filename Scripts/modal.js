@@ -1,0 +1,4 @@
+function creaModal() {
+    $(body).append();
+}
+

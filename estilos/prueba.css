@@ -1,0 +1,26 @@
+#imagen1 {
+    position: absolute;
+    /*z-index: 5;*/
+}
+
+#imagen2 {
+    position: absolute;
+}
+
+#izq {
+    background-color: antiquewhite;
+    width: 100%;
+    height: 100px;
+}
+
+#centro {
+    background-color: aquamarine;
+    width: 100%;
+    height: 100px;
+}
+
+#dch {
+    background-color: brown;
+    width: 100%;
+    height: 100px;
+}

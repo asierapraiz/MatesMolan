@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Document</title>
+    <script src="Scripts/jquery-1.12.0.js"></script>
+    <script src="Scripts/jquery.cookie.js"></script>
+    <script src="Scripts/bootbox.min.js"></script>
+    <!--Fuente-->
+    <link href='https://fonts.googleapis.com/css?family=Patrick+Hand+SC' rel='stylesheet' type='text/css'>
+
+    <link rel="stylesheet" type="text/css" href="estilos/flip.css">
+    <link rel="stylesheet" type="text/css" href="estilos/simon.css">
+
+    <!-- Latest compiled and minified CSS -->
+    <link rel="stylesheet" href="bootstrap-3.3.7-dist/css/bootstrap.min.css" crossorigin="anonymous">
+    <!-- Optional theme -->
+    <link rel="stylesheet" href="bootstrap-3.3.7-dist/css/bootstrap-theme.min.css" crossorigin="anonymous">
+
+    <!-- Latest compiled and minified JavaScript -->
+    <script src="bootstrap-3.3.7-dist/js/bootstrap.min.js" crossorigin="anonymous"></script>
+    <script src="Scripts/jquery-ui.js"></script>
+    <script src="Scripts/snap.js"></script>
+
+
+
+</head>
+
+<body>
+
+    <div id="contenedor">
+
+        <div id="cabecera">
+
+            <h1>Ordena correctamente los resultados. <?php echo ($_POST['ladel'])?>.</h1>
+            <hr>
+        </div>
+        <div id="aside">
+            <div id="marcador">
+                <p>PUNTOS PARTIDA</p>
+                <p id="puntos">000</p>
+                <hr>
+                <p>PUNTOS TOTALES</p>
+                <p id="puntosTotales">000
+                </p>
+            </div>
+        </div>
+        <div id="grid">
+            <div id="simon" class="col-xs-12">
+                <div id="rojo" class="quesito"> </div>
+                <div id="azul" class="quesito"></div>
+                <div id="verde" class="quesito"></div>
+                <div id="amarillo" class="quesito"></div>
+            </div>
+        </div>
+        <div id="asideDch">
+
+            <div id="bocata">
+                <div id="mensaje">
+                    <p id="texto" class="mensaje"></p>
+                </div>
+            </div>
+            <div id="vadorrin">
+                <img id="vadorrin1" src="img/Pose.png">
+                <img id="vadorrin2" src="img/MiraPanel.png">
+            </div>
+        </div>
+    </div>
+    <script src="Scripts/funciones.js"></script>
+    <script src="Scripts/marcador.js"></script>
+    <script src="Scripts/simon.js"></script>
+
+
+
+
+
+</body>
+
+</html>
