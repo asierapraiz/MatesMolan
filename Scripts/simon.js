@@ -7,8 +7,10 @@ var dingVerde = new Audio('audio/ding3.ogg');
 
 //------------Distintas variables--------------
 var colores = ["rojo", "azul", "verde", "amarillo"];
-var jugada = [];
+//En original voy guardando los colores elegidos por simon
 var original = [];
+//Utilizo jugada para mostrar y comparar .
+var jugada = [];
 //Variable que marca la velocidad inicial.
 var velocidad = 1200;
 
@@ -34,8 +36,10 @@ function juega() {
     setTimeout(function () {
         //Ilumina quesito.
         ilumina($("#" + jugada[0]));
+        //Borro de jugada el color ya mostrado
         jugada.shift();
         if (jugada.length == 0) {
+            //Vulevo a recargar jugada con el original
             jugada = original.slice();
             escucha();
         } else {
@@ -45,12 +49,15 @@ function juega() {
 }
 
 //Turno del jugador.
+//Comprueba cada selección del jugador.
 function escucha() {
     $(".quesito").on("click", function () {
         //Si acierta...
         if ($(this).attr('id') == jugada[0]) {
             ilumina($(this));
+            //Borro el color acertado
             jugada.shift();
+            //Si ya no quedan colores en el array..
             if (jugada.length == 0) {
                 setTimeout(function () {
                     añadeColor();
