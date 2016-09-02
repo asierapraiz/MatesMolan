@@ -1,3 +1,4 @@
+//Este cambio es del portatil.
 //Math.floor((Math.random() * 4));
 //-----------------Audios---------------------
 var dingRojo = new Audio('audio/ding0.ogg');
