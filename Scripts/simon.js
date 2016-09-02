@@ -1,10 +1,11 @@
-<<<<<<< HEAD
+<< << << < HEAD
 //Este cambio es del portatil.
-=======
-//Este cambio es de laptop.
->>>>>>> MatesMolan/master
-//Math.floor((Math.random() * 4));
-//-----------------Audios---------------------
+    === === =
+    //Este cambio es de laptop.
+    >>> >>> > MatesMolan / master
+    //Nuevo cambio desde el laptop.
+    //Math.floor((Math.random() * 4));
+    //-----------------Audios---------------------
 var dingRojo = new Audio('audio/ding0.ogg');
 var dingAzul = new Audio('audio/ding1.ogg');
 var dingAmarillo = new Audio('audio/ding2.ogg');
