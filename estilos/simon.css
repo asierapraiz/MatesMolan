@@ -145,6 +145,21 @@
         }
     }
     
+    .fallo {
+        -webkit-animation: fallo 3s;
+        box-shadow: 0px 0px 12px 6px #4df4da;
+    }
+
+    @-webkit-keyframes fallo {
+        0%,
+        100% {
+            -webkit-filter: brightness(none);
+        }
+        50% {
+            -webkit-filter: brightness(0.3);
+        }
+    }
+
     .brilla {
         -webkit-animation: brightness 1s;
         box-shadow: 0px 0px 12px 6px #4df4da;

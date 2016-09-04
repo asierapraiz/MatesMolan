@@ -66,6 +66,7 @@ function escucha() {
             //Si falla...
         } else {
             audioError.play();
+            fallo($(this));
             //Reseteo todo
             jugada.length = 0;
             original.length = 0;
@@ -73,9 +74,17 @@ function escucha() {
             //Vuelvo a empezar..
             setTimeout(function () {
                 añadeColor();
-            }, 3000);
+            }, 2000);
         }
     });
+}
+
+//Apaga el quesito por fallar
+function fallo(elemento) {
+    elemento.addClass('fallo');
+    setTimeout(function () {
+        elemento.removeClass('fallo');
+    }, 2000);
 }
 
 
