@@ -12,46 +12,78 @@ function fallo() {
 }*/
 
 //Relleno el grid de cartas, que las tomo de la lista desordenada.
+var intervalo = 700;
+var numero = 0;
 
-var numero = 2;
+
+/*
+$("#grid").append("<div id='centenas' class='marco'><div class='up' ><img class='carta' src='img/" + numero + ".jpg'></div>  <div class='down'> <img class='carta' src='img/1.jpg'></div></div><div id='decenas' class='marco'><div class='up' ><img class='carta' src='img/" + numero + ".jpg'></div><div class='down'> <img class='carta' src='img/1.jpg'></div></div><div id='unidades' class='marco'><div class='up' ><img class='carta' src='img/" + numero + ".jpg'></div><div class='down'> <img class='carta' src='img/1.jpg'></div>");*/
+
+$("#grid").append("<div id='decenas' class='marco'><div class='up' ><img class='carta' src='img/" + (numero + 1) + ".jpg' name='" + (numero + 1) + "'></div><div class='down'> <img class='carta' src='img/0.jpg'></div></div><div id='unidades' class='marco'><div class='up'><img class='carta' src='img/" + numero + ".jpg'  name='" + numero + "'></div><div class='down'><img class='carta' src='img/0.jpg'></div></div>");
+
+$("#unidades").on("click", function () {
+    $(".up").css("transition", intervalo);
+    suma(13);
+})
 
 
-//--------------Clase unidad--------------------
-var unidad = function (valor) {
-    this.añadir = function (valor) {
-        $("#grid").append("<div id='horas' class='marco' name='horas'><div class='front up' ><img class='carta' src='img/" + valor + ".jpg'></div><div class='back down'> <img class='carta' src='img/1.jpg'></div></div>");
-        $("#horas").on("click", function () {
-            cambiaHora(valor);
-        })
-    }
-}
+
 
 $("#vadorrin").on("click", function () {
-    console.log("ok");
     //cambiaHora(numero);
     var unidades = new unidad(numero);
     unidades.añadir(numero);
 });
 
-$("#horas").on("click", function () {
-    console.log("ok2");
-})
+function suma(cantidad) {
+    cambiaUnidad();
+    cantidad--;
+    setTimeout(function () {
+        if (cantidad > 0) {
+            suma(cantidad);
+        }
+    }, intervalo);
+};
 
-function cambiaHora() {
 
-    //Giro la carta superior
-    $(".up").css({
+
+function cambiaUnidad() {
+    $("#unidades .up").css({
         "transform": "rotateX(0deg)"
     });
     setTimeout(function () {
-        $(".down .carta").attr("src", "img/" + numero + ".jpg"); //Cambio el valor de carta inferior.
-        $(".up").remove(); //Elimino la carta girada y preparo una nueva.
+        $("#unidades .down .carta").attr("src", "img/" + numero + ".jpg"); //Cambio el valor de carta inferior.
+        $("#unidades .up").remove(); //Elimino la carta girada y preparo una nueva.
         numero++; //Cambio el valor de numero.
+        if (numero == 10) {
+            cambiaDecenas();
+
+            numero = 0;
+        }
         //Preparo una nueva carta.
-        $("#horas").append("<div class='front up'><img class='carta' src='img/" + numero + ".jpg'> </div>");
-    }, 700);
+        $("#unidades").append("<div class='up'><img class='carta' src='img/" + numero + ".jpg'> </div>");
+    }, intervalo - (intervalo / 20));
 }
 
+function cambiaDecenas() {
+    var valor = $("#decenas .up .carta").attr('name');
+    console.log(valor);
+
+    $("#decenas .up").css({
+        "transform": "rotateX(0deg)"
+    });
+    setTimeout(function () {
+        $("#decenas .down .carta").attr("src", "img/" + valor + ".jpg"); //Cambio el valor de carta inferior.
+        $("#decenas .up").remove(); //Elimino la carta girada y preparo una nueva.  valor++;
+        valor++;
+        //Preparo una nueva carta.
+        $("#decenas").append("<div class='up'><img class='carta' src='img/" + valor + ".jpg' name='" + valor + "'> </div>");
+    }, intervalo - (intervalo / 20));
+}
+
+
+
+//-------------------------------------------------------------------------------------------
 function victoria() {
     var puntos = parseInt($("#puntos").text());
     puntos += 20;
