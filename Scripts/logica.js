@@ -113,8 +113,6 @@ $(".marco").on("click", function () {
                 callback: function (result) {
                     //Compruebo relustado y clasifico respuesta.
                     clasifica(comprueba(result));
-
-
                 }
             });
         }

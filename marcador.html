@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+
+
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Document</title>
+    <script src="Scripts/jquery-1.12.0.js"></script>
+    <script src="Scripts/jquery.cookie.js"></script>
+    <script src="Scripts/bootbox.min.js"></script>
+    <!--Fuente-->
+    <link href='https://fonts.googleapis.com/css?family=Patrick+Hand+SC' rel='stylesheet' type='text/css'>
+
+    <link rel="stylesheet" type="text/css" href="estilos/marcador.css">
+    <link rel="stylesheet" type="text/css" href="estilos/estilo.css">
+
+    <!-- Latest compiled and minified CSS -->
+    <link rel="stylesheet" href="bootstrap-3.3.7-dist/css/bootstrap.min.css" crossorigin="anonymous"> .
+    <!-- Optional theme -->
+    <link rel="stylesheet" href="bootstrap-3.3.7-dist/css/bootstrap-theme.min.css" crossorigin="anonymous">
+
+    <!-- Latest compiled and minified JavaScript -->
+    <script src="bootstrap-3.3.7-dist/js/bootstrap.min.js" crossorigin="anonymous"></script>
+
+
+
+</head>
+
+<body>
+    <div class="modal fade" id="mostrarmodal" tabindex="-1" role="dialog" aria-labelledby="basicModal" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+                    <h3>Responde.</h3>
+                </div>
+                <div class="modal-body">
+                    <h4>Texto de la ventana</h4> Mas texto en la ventana.
+                </div>
+                <div class="modal-footer">
+                    <a href="#" data-dismiss="modal" class="btn btn-danger">Cerrar</a>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div id="contenedor" class="container">
+
+        <!-- Example row of columns -->
+
+        <div class="row">
+
+            <div id="cabecera" class="col-xs-12">
+                <h1>Busca los amigos del 10.</h1>
+                <hr>
+            </div>
+            <div id="info" class="col-xs-2">
+                <div id="marcador">
+                    <p>PUNTOS PARTIDA</p>
+                    <p id="puntos">000</p>
+                    <hr>
+                    <p>PUNTOS TOTALES</p>
+                    <p id="puntosTotales">
+                    </p>
+                </div>
+            </div>
+            <div id="grid" class="col-xs-6">
+
+                <!--Aqui van las cartas que se generan por jscript-->
+
+            </div>
+            <div id="lateralDch" class="col-xs-4">
+
+                <div id="bocata">
+                    <div id="mensaje">
+                        <p id="texto" class="mensaje"></p>
+                    </div>
+                </div>
+                <div id="vadorrin">
+                    <img id="vadorrin1" src="img/Pose.png">
+                    <img id="vadorrin2" src="img/MiraPanel.png">
+                </div>
+            </div>
+        </div>
+    </div>
+    </div>
+
+
+    <script src="Scripts/marcador.js"></script>
+
+
+
+
+
+</body>
+
+</html>

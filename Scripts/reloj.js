@@ -8,11 +8,3 @@ function mueveReloj(momentoActual) {
 
     document.form_reloj.reloj.value = horaImprimible
 }
-
-
-
-function alerta() {
-    bootbox.confirm("Are you sure?", function (result) {
-        Example.show("Confirm result: " + result);
-    });
-}

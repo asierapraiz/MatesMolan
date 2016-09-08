@@ -1,14 +1,14 @@
 <?php 
 // Recuperamos la información de la sesión
 session_start();
-
+/*
 if (!isset($_SESSION['usuario'])){
     //die("Error - debe <a href='acceso.php'>identificarse</a>.<br />");   
      header("Location: acceso.php");
 }else{
     echo $_SESSION['usuario'];
 }
-    
+   */
    
 ?>
 
