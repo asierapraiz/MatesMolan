@@ -30,8 +30,10 @@ function acierto(acierto) {
         $("#vadorrin1").delay(3500).fadeIn(1000);
 
         /*---Añado los puntos al marcador---*/
+        sumaPuntos(5);
+        //--------------
         var puntos = parseInt($("#puntos").text());
-        puntos += 5;
+
         $("#puntos").text(puntos);
     } else {
         audioError.play();

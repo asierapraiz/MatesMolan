@@ -6,11 +6,6 @@
     font-weight: bold;
 }
 
-#puntos,
-#puntosTotales {
-    font-size: 2em;
-}
-
 #contenedor {
     width: 80%;
     height: inherit;
@@ -36,26 +31,6 @@
 
 #vadorrin2 {
     display: none;
-}
-
-.marco {
-    width: 25%;
-    height: 25%;
-    float: left;
-}
-
-.front,
-.back {
-    width: 100%;
-    height: 100%;
-    position: absolute;
-}
-
-.up,
-.down {
-    width: 100%;
-    height: 100%;
-    position: absolute;
 }
 
 .carta,
