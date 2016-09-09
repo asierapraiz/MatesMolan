@@ -14,7 +14,7 @@ marcador += "<div id='decenas' class='marco'><div class='up' ><img class='carta'
 
 marcador += "<div id='unidades' class='marco'><div class='up' ><img class='carta' src='img/" + (unidades + 1) + ".jpg' name='" + (unidades + 1) + "'></div><div class='down'> <img class='carta' src='img/" + unidades + ".jpg'></div></div>";
 //------Incorporo el marcador a la pantalla
-//$("#grid").append(marcador);
+$("#puntos").append(marcador);
 
 //Provisional
 $("#unidades").on("click", function () {

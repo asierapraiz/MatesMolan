@@ -1,37 +1,23 @@
 #marcador {
     font-size: 0.8em;
     width: 100%;
-    height: 300px;
+    height: 10%;
 }
 
 #puntos {
     width: 100%;
+    height: 50px;
+}
+
+.marco {
+    width: 33%;
     height: 100%;
-    background-color: mediumvioletred;
-}
-
-#prueba {
-    width: 50%;
-    height: 100px;
-    background-color: #1590c7;
-}
-
-#marco {
-    width: 50%;
-    height: 50%;
-    background-color: aquamarine;
-}
-
-.front,
-.back {
-    width: 100%;
-    height: 100%;
-    position: absolute;
+    float: left;
 }
 
 .up,
 .down {
-    width: 100%;
+    width: 30%;
     height: 100%;
     position: absolute;
 }
@@ -55,6 +41,11 @@
     backface-visibility: hidden;
 }
 
+.carta {
+    width: 80%;
+    height: auto;
+}
+
 
 /* front pane, placed above back */
 
@@ -62,10 +53,8 @@
     z-index: 4;
     transform: rotateX(180deg);
     transform-origin: top;
+    /* back, initially hidden pane */
 }
-
-
-/* back, initially hidden pane */
 
 .down {
     z-index: 2;
