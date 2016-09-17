@@ -3,10 +3,10 @@ var dificultad = 16;
 var elec = [];
 var acierto = 0;
 var aciertos = 0;
-var audio = new Audio('audio/acierto.wav');
+var audio = new Audio('audio/acierto.mp3');
 var audioWin = new Audio('audio/win.mp3');
-var audioError = new Audio('audio/error.ogg');
-var audioFin = new Audio('audio/fin.wav');
+var audioError = new Audio('audio/error.mp3');
+var audioFin = new Audio('audio/fin.mp3');
 var text = $("#texto");
 var btnMensaje = 1;
 var puntos = 0;
@@ -19,6 +19,7 @@ $("#puntosTotales").text($.cookie('puntos'));
 
 text.text("Busca las parejas que sean amigos del 10.")
     .fadeIn(2000);
+
 
 
 
@@ -66,7 +67,7 @@ function Shuffle(o) {
 for (var i = 1; i <= dificultad / 2; i++) {
     //Tomo un número aleatorio del 1 al 9.
     var num = Math.floor(Math.random() * (10 - 1) + 1);
-    //Me el número y su amigo en el array.
+    //Mete el número y su amigo en el array.
     lista.push(num);
     lista.push(10 - num);
 }

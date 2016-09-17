@@ -1,6 +1,19 @@
+<!--<?php
+// Recuperamos la información de la sesión
+session_start();
+/*
+if (!isset($_SESSION['usuario'])){
+    //die("Error - debe <a href='acceso.php'>identificarse</a>.<br />");
+     header("Location: acceso.php");
+}else{
+    echo $_SESSION['usuario'];
+}
+   */
+
+?>-->
+
+
 <!DOCTYPE html>
-
-
 <html lang="en">
 
 <head>
@@ -13,8 +26,8 @@
     <!--Fuente-->
     <link href='https://fonts.googleapis.com/css?family=Patrick+Hand+SC' rel='stylesheet' type='text/css'>
 
-    <link rel="stylesheet" type="text/css" href="estilos/marcador.css">
-    <link rel="stylesheet" type="text/css" href="estilos/estilo.css">
+    <link rel="stylesheet" type="text/css" href="estilos/flip.css">
+    <link rel="stylesheet" type="text/css" href="estilos/estilo2.css">
 
     <!-- Latest compiled and minified CSS -->
     <link rel="stylesheet" href="bootstrap-3.3.7-dist/css/bootstrap.min.css" crossorigin="anonymous"> .
@@ -29,22 +42,21 @@
 </head>
 
 <body>
-    <div class="modal fade" id="mostrarmodal" tabindex="-1" role="dialog" aria-labelledby="basicModal" aria-hidden="true">
+    <div class="modal fade" id="miModal" tabindex="-1" role="dialog" aria-labelledby="basicModal" aria-hidden="true">
         <div class="modal-dialog">
             <div class="modal-content">
                 <div class="modal-header">
                     <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
-                    <h3>Responde.</h3>
+                    <h3>Atención</h3>
                 </div>
                 <div class="modal-body">
-                    <h4>Texto de la ventana</h4> Mas texto en la ventana.
+                    <h4>Debes girar la pantalla.</h4>
                 </div>
-                <div class="modal-footer">
-                    <a href="#" data-dismiss="modal" class="btn btn-danger">Cerrar</a>
-                </div>
+
             </div>
         </div>
     </div>
+
     <div id="contenedor" class="container">
 
         <!-- Example row of columns -->
@@ -55,7 +67,18 @@
                 <h1>Busca los amigos del 10.</h1>
                 <hr>
             </div>
+
+
             <div id="info" class="col-xs-2">
+                <div id="marcador">
+                    <p>PUNTOS PARTIDA</p>
+                    <p id="puntos">000</p>
+                    <hr>
+                    <p>PUNTOS TOTALES</p>
+                    <p id="puntosTotales">
+                    </p>
+                </div>
+
 
             </div>
             <div id="grid" class="col-xs-6">
@@ -66,10 +89,11 @@
             <div id="lateralDch" class="col-xs-4">
 
                 <div id="bocata">
-                    <div id="marcador">
-
+                    <div id="mensaje">
+                        <p id="texto" class="mensaje"></p>
 
                     </div>
+
 
                 </div>
                 <div id="vadorrin">
@@ -81,9 +105,10 @@
     </div>
     </div>
 
-
-    <script src="Scripts/marcador.js"></script>
-
+    <script src="Scripts/listener.js"></script>
+    <script src="Scripts/funciones.js"></script>
+    <script src="Scripts/reloj.js"></script>
+    <script src="Scripts/logica.js"></script>
 
 
 

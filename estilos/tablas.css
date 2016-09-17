@@ -1,179 +1,247 @@
-#cabecera h1,
-#aside {
-    font-family: 'Patrick Hand SC', cursive;
-    text-align: center;
-    font-size: 3em;
-    font-weight: bold;
-}
+    #cabecera h1,
+    #tablaRepaso p,
+    #aside p {
+        font-family: 'Patrick Hand SC', cursive;
+        text-align: center;
+        font-size: 2em;
+        font-weight: bold;
+    }
 
-#cabecera {
-    height: 6em;
-}
+    #tituloModal p {
+        font-family: 'Patrick Hand SC', cursive;
+        text-align: center;
+        font-size: 2em;
+        font-weight: bold;
+        color: #3d87a2;
+    }
 
-#contenedor {
-    width: 80%;
-    height: 80vh;
-    margin: 0 auto;
-}
+    #cabecera {
+        height: 12%;
+        margin-bottom: 5%;
+    }
+    /*///////////Media Queries///////////////////*/
 
-#aside {
-    width: 20%;
-    height: 100%;
-    float: left;
-}
+    @media only screen and (max-width: 660px) {
+        #cabecera h1 {
+            font-size: 2em;
+        }
+        #aside p {
+            font-size: 1em;
+        }
+        #cabecera {
+            background-color: lightblue;
+        }
+        #contenedor {
+            width: 100%;
+        }
+    }
 
-#grid {
-    width: 50%;
-    height: 100%;
-    float: left;
-}
+    #contenedor {
+        width: 80%;
+        height: 80vh;
+        margin: 0 auto;
+    }
 
-#asideDch {
-    width: 30%;
-    height: 100%;
-    float: left;
-}
+    #aside {
+        width: 20%;
+        height: 100%;
+        float: left;
+    }
 
-#vadorrin {
-    width: 50%;
-    height: auto;
-}
+    #grid {
+        width: 50%;
+        height: 100%;
+        float: left;
+    }
 
-#vadorrin1,
-#vadorrin2 {
-    position: absolute;
-    height: 50vh;
-}
+    #asideDch {
+        width: 30%;
+        height: 100%;
+        float: left;
+    }
 
-#vadorrin2 {
-    display: none;
-}
+    #vadorrin {
+        width: 50%;
+        height: auto;
+    }
 
-.marco {
-    width: 25%;
-    height: 25%;
-    float: left;
-}
+    #vadorrin1,
+    #vadorrin2 {
+        position: absolute;
+        height: 50vh;
+    }
 
-.carta {
-    width: 100%;
-    height: 100%;
-    padding-top: 30%;
-    text-align: center;
-    font-size: 3em;
-    font-weight: bold;
-    box-shadow: 0 0 12px 0 rgba(237, 80, 80, 0.2);
-}
+    #vadorrin2 {
+        display: none;
+    }
 
-.cartaElegida {
-    width: 100%;
-    height: 100%;
-    border-radius: 30px;
-    padding-top: 30%;
-    text-align: center;
-    font-size: 3em;
-    font-weight: bold;
-    box-shadow: 0 0 24px 0 rgba(11, 164, 245, 0.79);
-}
+    .marco {
+        width: 25%;
+        height: 25%;
+        float: left;
+    }
 
-.cartaAcertada {
-    width: 100%;
-    height: 100%;
-    padding-top: 30%;
-    text-align: center;
-    font-size: 3em;
-    font-weight: bold;
-    box-shadow: 0 0 16px 0 rgba(11, 164, 245, 0.59);
-}
+    .carta {
+        width: 100%;
+        height: 100%;
+        padding-top: 30%;
+        text-align: center;
+        font-size: 3em;
+        font-weight: bold;
+        box-shadow: 0 0 12px 0 rgba(237, 80, 80, 0.2);
+    }
 
-.front,
-.back {
-    width: 100%;
-    height: 100%;
-    position: absolute;
-}
+    .cartaElegida {
+        width: 100%;
+        height: 100%;
+        border-radius: 30px;
+        padding-top: 30%;
+        text-align: center;
+        font-size: 3em;
+        font-weight: bold;
+        box-shadow: 0 0 24px 0 rgba(11, 164, 245, 0.79);
+    }
 
-#b1 {
-    width: 20%;
-    height: 10%;
-    margin-top: 5px;
-    margin-right: 5px;
-    float: right;
-}
+    .cartaAcertada {
+        width: 100%;
+        height: 100%;
+        padding-top: 30%;
+        text-align: center;
+        font-size: 3em;
+        font-weight: bold;
+        box-shadow: 0 0 16px 0 rgba(11, 164, 245, 0.59);
+    }
 
-.mensaje {
-    font-size: 1.5em;
-    padding: 5%;
-    display: none;
-    font-weight: bold;
-}
+    .front,
+    .back {
+        width: 100%;
+        height: 100%;
+        position: absolute;
+    }
 
-#bocata {
-    font-family: 'Patrick Hand SC', cursive;
-    border-style: solid;
-    border-color: deepskyblue;
-    border-radius: 20px;
-    border-width: 0.5em;
-    width: 100%;
-    height: 30%;
-}
+    #b1 {
+        width: 20%;
+        height: 10%;
+        margin-top: 5px;
+        margin-right: 5px;
+        float: right;
+    }
 
-#mensaje {
-    width: 100%;
-    height: 80%;
-}
+    .mensaje {
+        font-size: 1.5em;
+        padding: 5%;
+        display: none;
+        font-weight: bold;
+    }
 
-.parrafo {
-    text-align: center;
-}
+    #bocata {
+        font-family: 'Patrick Hand SC', cursive;
+        border-style: solid;
+        border-color: deepskyblue;
+        border-radius: 20px;
+        border-width: 0.5em;
+        width: 100%;
+        height: 30%;
+    }
 
-.superImagen {
-    width: 30%;
-    height: 30%;
-    float: left;
-}
+    #mensaje {
+        width: 100%;
+        height: 80%;
+    }
 
-#columnaIzq {
-    width: 25%;
-    height: auto;
-    background-color: beige;
-    float: left;
-    border-bottom-style: solid;
-    border-color: black;
-    border: 2px;
-}
+    .parrafo {
+        text-align: center;
+    }
 
-#columnaDch {
-    background-color: aqua;
-    width: 10%;
-    height: auto;
-    border-bottom-style: solid;
-    border-color: black;
-    border: 2px;
-    float: right;
-}
+    .superImagen {
+        width: 30%;
+        height: 30%;
+        float: left;
+    }
 
-.fila {
-    background-color: #3bff00;
-    width: 100%;
-    height: 20px;
-}
+    #columnaIzq {
+        width: 25px;
+        height: auto;
+        float: left;
+    }
 
-.multi {
-    background-color: aqua;
-    width: 50%;
-    height: 20px;
-    float: left;
-}
+    #hr {}
 
-.resultado {
-    background-color: #f49414;
-    width: 50%;
-    height: 20px;
-    float: left;
-}
+    #columnaDch {
+        margin-left: 20px;
+        width: 10%;
+        height: auto;
+        float: right;
+    }
 
-.opcion {
-    background-color: blueviolet;
-    align-self: center;
-}
+    .dropable {
+        float: left;
+        background-color: #dd84f2;
+        width: 7em;
+    }
+
+    .dragable {
+        text-align: center;
+        float: right;
+        background-color: #00ebff;
+        width: 3.4em;
+    }
+
+    .dropable,
+    .dragable {
+        color: black;
+        height: auto;
+        border: solid 4px #42464b;
+        border-radius: 8px;
+        font-weight: bold;
+        padding: 0.3em;
+        font-size: 1.5em;
+    }
+
+    .selector {
+        width: 2.5em;
+        height: 2.5em;
+        margin: 0 auto;
+        text-align: center;
+        color: black;
+        background-color: #c3f468;
+        border: solid 4px #42464b;
+        border-radius: 100%;
+        font-weight: bold;
+        padding: 0.3em;
+        font-size: 1.5em;
+    }
+
+    @media only screen and (max-width: 660px) {
+        .dropable,
+        .dragable {
+            border: solid 2px #42464b;
+            padding: 0.005em;
+            font-size: 1.2em;
+        }
+        .multi {
+            background-color: aqua;
+            width: 50%;
+            height: 100%;
+            float: left;
+            font-size: 1.2em;
+            text-align: center;
+        }
+        .selector {
+            border: solid 2px #42464b;
+            font-size: 0.8em;
+        }
+        .resultado {
+            min-height: 25px;
+        }
+    }
+
+    .opcion {
+        background-color: blueviolet;
+        align-self: center;
+        text-align: center;
+    }
+
+    #tablaRepaso p {
+        margin-left: 10%;
+    }

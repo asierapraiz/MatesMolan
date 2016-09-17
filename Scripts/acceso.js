@@ -9,7 +9,15 @@ $("#entrar").click(function () {
 });
 
 
-
+$("#1").click(function () {
+    location.href = "juego.html";
+});
+$("#2").click(function () {
+    location.href = "tablas.html";
+});
+$("#3").click(function () {
+    location.href = "simon.html";
+});
 
 
 /*------VADORRIN------------------*/
@@ -43,7 +51,7 @@ function vosteza() {
 
 function guiña() {
     $("#vadorrin1").fadeOut();
-    $("#vadorrin2").attr("src", "img/Pose2Guiña.png").fadeIn()
+    $("#vadorrin2").attr("src", "img/Pose2.png").fadeIn()
         .delay(1000).fadeOut(1000);
     $("#vadorrin1").delay(1000).fadeIn(1000);
 

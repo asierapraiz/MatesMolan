@@ -4,6 +4,7 @@ var dingRojo = new Audio('audio/ding0.ogg');
 var dingAzul = new Audio('audio/ding1.ogg');
 var dingAmarillo = new Audio('audio/ding2.ogg');
 var dingVerde = new Audio('audio/ding3.ogg');
+var audioError = new Audio('audio/error.mp3');
 
 //------------Distintas variables--------------
 var colores = ["rojo", "azul", "verde", "amarillo"];

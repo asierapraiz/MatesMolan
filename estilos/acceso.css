@@ -1,18 +1,29 @@
-#bocata {
+.menu {
     font-family: 'Patrick Hand SC', cursive;
-    font-size: 175%;
+    font-size: 2em;
     font-weight: bold;
     text-align: center;
-    background-color: antiquewhite;
+    background-color: #c0f797;
     border-style: solid;
     border-color: #61dbfa;
-    border-radius: 20px;
-    border-width: 0.3em;
-    width: 100%;
-    margin-left: 20px;
+    border-radius: 7px;
+    border-width: 0.2em;
+    width: 50%;
+    margin: 0 auto;
     height: auto;
-    padding: 5%;
-    padding-bottom: 15%;
+    padding: 2%;
+    margin-bottom: 2%;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 4px 8px 0 rgba(0, 0, 0, 0.19);
+}
+
+@media only screen and (max-width: 660px) {
+    .menu {
+        border: solid 4px #61dbfa;
+        padding: 0.5em;
+        font-size: 1.2em;
+        margin: 0 auto;
+        margin-bottom: 2%;
+    }
 }
 
 #contenedor {
@@ -66,4 +77,8 @@ input {
 
 #vadorrin2 {
     display: none;
+}
+
+#turn {
+    margin: 30%;
 }
