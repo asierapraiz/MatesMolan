@@ -1,22 +1,26 @@
-//Math.floor((Math.random() * 4));
-//-----------------Audios---------------------
-var dingRojo = new Audio('audio/ding0.ogg');
-var dingAzul = new Audio('audio/ding1.ogg');
-var dingAmarillo = new Audio('audio/ding2.ogg');
-var dingVerde = new Audio('audio/ding3.ogg');
-var audioError = new Audio('audio/error.mp3');
-
-//------------Distintas variables--------------
-var colores = ["rojo", "azul", "verde", "amarillo"];
-//En original voy guardando los colores elegidos por simon
-var original = [];
-//Utilizo jugada para mostrar y comparar .
-var jugada = [];
-//Variable que marca la velocidad inicial.
-var velocidad = 1200;
-
 //-----------Comienza el juego--------------
 $(document).ready(function () {
+    //Math.floor((Math.random() * 4));
+    //-----------------Audios---------------------
+    /*
+    var dingRojo = new Audio('../audio/ding0.mp3');
+    var dingAzul = new Audio('../audio/ding1.mp3');
+    var dingAmarillo = new Audio('../audio/ding2.mp3');
+    var dingVerde = new Audio('../audio/ding3.mp3');
+    var audioError = new Audio('../audio/error.mp3');*/
+    $("#play").click(function () {
+        $("#rojo")[0].play();
+    });
+
+
+    //------------Distintas variables--------------
+    var colores = ["rojo", "azul", "verde", "amarillo"];
+    //En original voy guardando los colores elegidos por simon
+    var original = [];
+    //Utilizo jugada para mostrar y comparar .
+    var jugada = [];
+    //Variable que marca la velocidad inicial.
+    var velocidad = 1200;
     añadeColor();
 });
 //Selecciona un color al azar y lo incluye en el array original.
@@ -98,6 +102,7 @@ function ilumina(elemento) {
     var color = elemento.attr('id');
     switch (color) {
     case 'rojo':
+
         if (dingRojo.currentTime > 0 || !dingRojo.paused) {
             dingRojo.currentTime = 0;
         }

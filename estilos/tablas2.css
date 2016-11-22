@@ -1,179 +1,72 @@
-#cabecera h1,
-#aside {
-    font-family: 'Patrick Hand SC', cursive;
-    text-align: center;
-    font-size: 3em;
-    font-weight: bold;
+#ventana {
+    box-shadow: 0 0 16px 0 black;
+    background-image: url("../img/pizarra.png");
+    -webkit-filter: drop-shadow(5px 5px 5px #222);
+    filter: drop-shadow(5px 5px 5px #222);
+    background-size: 100% 100%;
+    padding-top: 1.5em;
+    height: 60%;
+    border-radius: 5%;
 }
 
-#cabecera {
-    height: 6em;
-}
-
-#contenedor {
-    width: 80%;
-    height: 80vh;
-    margin: 0 auto;
-}
-
-#aside {
-    width: 20%;
-    height: 100%;
-    float: left;
-}
-
-#grid {
-    width: 50%;
-    height: 100%;
-    float: left;
-}
-
-#asideDch {
-    width: 30%;
-    height: 100%;
-    float: left;
-}
-
-#vadorrin {
-    width: 50%;
-    height: auto;
-}
-
-#vadorrin1,
-#vadorrin2 {
-    position: absolute;
-    height: 50vh;
-}
-
-#vadorrin2 {
-    display: none;
-}
-
-.marco {
-    width: 25%;
-    height: 25%;
-    float: left;
-}
-
-.carta {
-    width: 100%;
-    height: 100%;
-    padding-top: 30%;
-    text-align: center;
-    font-size: 3em;
-    font-weight: bold;
-    box-shadow: 0 0 12px 0 rgba(237, 80, 80, 0.2);
-}
-
-.cartaElegida {
-    width: 100%;
-    height: 100%;
-    border-radius: 30px;
-    padding-top: 30%;
-    text-align: center;
-    font-size: 3em;
-    font-weight: bold;
-    box-shadow: 0 0 24px 0 rgba(11, 164, 245, 0.79);
-}
-
-.cartaAcertada {
-    width: 100%;
-    height: 100%;
-    padding-top: 30%;
-    text-align: center;
-    font-size: 3em;
-    font-weight: bold;
-    box-shadow: 0 0 16px 0 rgba(11, 164, 245, 0.59);
-}
-
-.front,
-.back {
-    width: 100%;
-    height: 100%;
-    position: absolute;
-}
-
-#b1 {
-    width: 20%;
-    height: 10%;
-    margin-top: 5px;
-    margin-right: 5px;
-    float: right;
-}
-
-.mensaje {
-    font-size: 1.5em;
-    padding: 5%;
-    display: none;
-    font-weight: bold;
-}
-
-#bocata {
-    font-family: 'Patrick Hand SC', cursive;
-    border-style: solid;
-    border-color: deepskyblue;
-    border-radius: 20px;
-    border-width: 0.5em;
-    width: 100%;
-    height: 30%;
-}
-
-#mensaje {
-    width: 100%;
-    height: 80%;
-}
-
-.parrafo {
+#opciones {
+    margin-top: 10%;
     text-align: center;
 }
 
-.superImagen {
-    width: 30%;
-    height: 30%;
-    float: left;
-}
-
-#columnaIzq {
-    width: 25%;
-    height: auto;
-    background-color: beige;
-    float: left;
-    border-bottom-style: solid;
-    border-color: black;
-    border: 2px;
-}
-
-#columnaDch {
-    background-color: aqua;
-    width: 10%;
-    height: auto;
-    border-bottom-style: solid;
-    border-color: black;
-    border: 2px;
-    float: right;
-}
-
-.fila {
-    background-color: #3bff00;
-    width: 100%;
-    height: 20px;
-}
-
-.multi {
-    background-color: aqua;
-    width: 50%;
-    height: 20px;
-    float: left;
-}
-
-.resultado {
-    background-color: #f49414;
-    width: 50%;
-    height: 20px;
-    float: left;
-}
-
-.opcion {
-    background-color: blueviolet;
+#opciones button {
+    box-shadow: 0 0 16px 0 black;
+    color: #e8e7db;
+    margin: 0.1em;
+    padding: 0em 0.6em 0em 0.6em;
+    font-size: 4em;
+    font-weight: bold;
     align-self: center;
+    border-radius: 0.2em;
+}
+
+#multi p {
+    color: #e8e7db;
+    text-align: center;
+    font-size: 7em;
+    font-weight: bold;
+}
+
+@media only screen and (max-width: 1600px) {
+    #opciones {
+        margin-top: 10%;
+    }
+    #opciones button {
+        margin: 0.1em;
+        padding-left: 0.3em;
+        padding-right: 0.3em;
+        font-size: 4em;
+    }
+    #multi p {
+        margin-bottom: 0.2em;
+        font-size: 5em;
+    }
+    #ventana {
+        margin-bottom: 1em;
+        height: 60%;
+    }
+}
+
+@media only screen and (max-width: 660px) {
+    #ventana {
+        height: 80%;
+    }
+    #multi p {
+        margin-top: 0.2em;
+        font-size: 3em;
+    }
+    #opciones {
+        margin-top: 0px;
+    }
+    #opciones button {
+        margin: 0.2em;
+        padding-left: 0.5em;
+        padding-right: 0.5em;
+        font-size: 1.8em;
+    }
 }

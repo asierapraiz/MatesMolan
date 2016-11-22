@@ -16,6 +16,9 @@ $("#2").click(function () {
     location.href = "tablas.html";
 });
 $("#3").click(function () {
+    location.href = "tablas2.html";
+});
+$("#4").click(function () {
     location.href = "simon.html";
 });
 

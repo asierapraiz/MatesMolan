@@ -13,7 +13,6 @@
 
     <link rel="stylesheet" type="text/css" href="estilos/flip.css">
     <link rel="stylesheet" type="text/css" href="estilos/simon.css">
-    <link rel="stylesheet" type="text/css" href="estilos/base.css">
     <link rel="stylesheet" type="text/css" href="estilos/marcador.css">
 
     <!-- Latest compiled and minified CSS -->
@@ -31,11 +30,6 @@
 </head>
 
 <body>
-    <audio id="rojo" preload="true" src="audio/ding0.mp3" type="audio/mp3"></audio>
-    <audio id="azul" preload="true" src="audio/ding1.mp3" type="audio/mp3"></audio>
-    <audio id="amarillo" preload="true" src="audio/ding2.mp3" type="audio/mp3"></audio>
-    <audio id="verde" preload="true" src="audio/ding3.mp3" type="audio/mp3"></audio>
-    <audio id="error" preload="true" src="audio/error.mp3" type="audio/mp3"></audio>
 
     <div class="modal fade" id="miModal" tabindex="-1" role="dialog" aria-labelledby="basicModal" aria-hidden="true">
         <div class="modal-dialog">
@@ -53,14 +47,21 @@
     </div>
 
     <div id="contenedor">
-        <!--
+
         <div id="cabecera">
 
             <h1>Ordena correctamente los resultados. <?php echo ($_POST['ladel'])?>.</h1>
             <hr>
-        </div>-->
+        </div>
         <div id="aside">
-
+            <div id="marcador">
+                <p>PUNTOS PARTIDA</p>
+                <p id="puntos">000</p>
+                <hr>
+                <p>PUNTOS TOTALES</p>
+                <p id="puntosTotales">000
+                </p>
+            </div>
         </div>
         <div id="grid">
             <div id="simon" class="col-xs-12">
@@ -85,7 +86,7 @@
     </div>
     <!--<script src="Scripts/funciones.js"></script>-->
     <script src="Scripts/listener.js"></script>
-    <script src="Scripts/simon.js"></script>
+
     <script src="Scripts/marcador.js"></script>
 
 

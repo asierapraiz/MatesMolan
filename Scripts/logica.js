@@ -78,14 +78,18 @@ Shuffle(lista);
 for (var i = 0; i <= (dificultad) - 1; i++) {
     var valor = i + 1;
 
+/*
+    $("#grid").append("<div id='" + valor + "' class='marco' name='" + lista[i] + "'><div class='front'>?</div><div class='back'>" + lista[i] + " </div></div>");
+*/
 
-    $("#grid").append("<div id='" + valor + "' class='marco' name='" + lista[i] + "'><div class='front'> <img   class='carta'  src='img/incognita.jpg'></div><div class='back'> <img class='carta' src='img/" + lista[i] + ".jpg'></div></div>");
+        $("#grid").append("<div id='" + valor + "' class='marco' name='" + lista[i] + "'><div class='front'> <img   class='carta'  src='img/incognita.jpg'></div><div class='back'> <img class='carta' src='img/" + lista[i] + ".jpg'></div></div>");
 
 }
 
 
 //Código que se ejecuta al presionar cada carta.
 $(".marco").on("click", function () {
+
     $(this).css("transform", "rotateY(180deg)");
     //Creo un objeto donde guardo los valores id y name del elemneto.
     var objeto = {
@@ -128,6 +132,7 @@ function clasifica(acierto) {
 
         $("#" + elec[0].id).css("transform", "rotateY(0deg)");
         $("#" + elec[1].id).css("transform", "rotateY(0deg)");
+
         elec.length = 0;
         puntos -= 2;
         $("#puntos").text(puntos);
@@ -140,6 +145,9 @@ function clasifica(acierto) {
     case 1:
         $("#" + elec[0].id).off("click");
         $("#" + elec[1].id).off("click");
+        $("#" + elec[0].id + " .back").css("background-color", "#45dafd");
+        $("#" + elec[1].id + " .back").css("background-color", "#45dafd");
+
         aciertos++;
         if (aciertos == 8) {
             puntos += 20;

@@ -8,14 +8,12 @@ var ladel = 2;
 var desde = 1;
 var hasta = 10;
 
-
-
 $(document).ready(function () {
     creaSelectores();
     creaElementos(ladel);
 });
 
-function creaSelectores() {
+function creaSelectores(hecho) {
     for (var a = 1; a <= 9; a++) {
         var selector = "<div id='" + a + "' class='selector'>" + a + "</div>";
         $("#aside").append(selector);
@@ -30,10 +28,7 @@ function creaSelectores() {
         var eleccion = $(this).text();
         ladel = eleccion;
         creaElementos();
-
     });
-
-
 }
 
 

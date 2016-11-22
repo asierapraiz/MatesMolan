@@ -16,32 +16,10 @@
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 4px 8px 0 rgba(0, 0, 0, 0.19);
 }
 
-@media only screen and (max-width: 660px) {
-    .menu {
-        border: solid 4px #61dbfa;
-        padding: 0.5em;
-        font-size: 1.2em;
-        margin: 0 auto;
-        margin-bottom: 2%;
-    }
-}
-
-#contenedor {
-    width: 80%;
-    height: 100vh;
-}
-
 .enviar,
 button {
     background-color: #61dbfa;
     border-radius: 10px;
-}
-
-#cabecera h1 {
-    font-family: 'Patrick Hand SC', cursive;
-    text-align: center;
-    font-size: 300%;
-    font-weight: bold;
 }
 
 label,
@@ -64,21 +42,16 @@ input {
     border-radius: 10px;
 }
 
-#lateralDch {
-    height: 90vh;
-}
-
-#vadorrin1,
-#vadorrin2 {
-    position: absolute;
-    width: 100%;
-    height: auto;
-}
-
-#vadorrin2 {
-    display: none;
-}
-
 #turn {
     margin: 30%;
+}
+
+@media only screen and (max-width: 660px) {
+    .menu {
+        border: solid 4px #61dbfa;
+        padding: 0.5em;
+        font-size: 1.2em;
+        margin: 0 auto;
+        margin-bottom: 2%;
+    }
 }
